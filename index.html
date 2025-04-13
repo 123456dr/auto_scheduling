@@ -6,93 +6,160 @@
   <title>RC_Auto_Scheduling</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #597492; /* 柔和灰色 */
-      color: #ffffff; /* 文字顏色，避免對比過高 */
-    }
-    h2 {
-      /*text-align: center; */
-      text-decoration: underline;
-      color: #333;
-    }
-    .container {
-      display: flex;
-      flex-direction: column;
-      height: 80vh;
-    }
-    .top {
-      display: flex;
-      flex: 1;
-    }
-    .top-left {
-      flex: 1;
-      padding: 10px;
-    }
-    .top-name { 
-      border: none;      /* 移除 div 的邊框 */
-      padding: 10px;     /* 設置 div 的內部間距 */
-      font-size: 14px;   /* 設置字體大小 */
-      display: inline-block;  /* 使 div 顯示為區塊元素，可以根據需要調整為 block 或 inline */
-    }
-    #name-table td {
-      padding: 10px; /* 設置單元格內部的間距 */
-      border: none; /* 設置單元格的邊框 */
-      font-size: 14px; /* 設置字體大小，根據需要調整 */
-      text-align: left; /* 設置文字對齊方式為左 */
-    }
-    .top-right {
-      flex: 1;
-      display: flex;
-      justify-content: space-between;
-      padding: 10px;
-    }
-    .table-group {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 0 10px;
-    }
-    .table-group .vertical-text {
-      text-align: center;
-      margin-bottom: 5px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 10px;
-    }
-    td, th {
-      border: 1px solid #ddd;
-      padding: 8px;
-      text-align: center;
-    }
-    .hidden {
-      display: none;
-    }
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      background-color: #333;
-      padding: 10px;
-      color: white;
-    }
-    .btn {
-      padding: 10px;
-      margin: 5px;
-      cursor: pointer;
-      border: none;
-      background-color: #007bff;
-      color: white;
-      border-radius: 5px;
-    }
-    .btn:hover {
-      background-color: #0056b3;
-    }
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f2f4f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
 
-    #moreContent {
-    display: none; /* 預設隱藏 */
-    max-height: none; /* 內容高度自適應 */
-    }
+h2 {
+  text-decoration: underline;
+  color: #2c3e50;
+  margin-top: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding: 20px;
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.top-left,
+.top-right,
+#name,
+#name1 {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.top-left,
+#name,
+#name1 {
+  flex: 1;
+  min-width: 300px;
+}
+
+.top-right {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.table-group {
+  margin: 10px;
+}
+
+.vertical-text {
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-align: center;
+  color: #34495e;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+td, th {
+  border: 1px solid #dcdcdc;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+#name-table td {
+  border: none;
+  padding: 8px;
+  text-align: left;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2c3e50;
+  padding: 12px 20px;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  color: #ecf0f1;
+  text-decoration: none;
+}
+
+.btn {
+  background-color: #3498db;
+  border: none;
+  padding: 10px 16px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+}
+
+input, select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+input:focus, select:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.hidden {
+  display: none;
+}
+
+#moreContent {
+  display: none;
+  margin-top: 20px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+a {
+  color: #2980b9;
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+p {
+  color: #999;
+  font-size: 13px;
+  margin-top: 20px;
+}
 
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
