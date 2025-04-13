@@ -1,5 +1,5 @@
 # RC Auto Scheduling
-一個準大學生的自動化assign系統<br>
+自動化assign系統<br>vide coding 對，看style就知道orz
 <a href="https://123456dr.github.io/auto_scheduling/" target="_blank">https://123456dr.github.io/auto_scheduling</a><br>
 
 yt影片 : https://youtu.be/lCesagWgb8s?feature=shared <br>
