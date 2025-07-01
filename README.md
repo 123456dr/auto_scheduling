@@ -1,5 +1,5 @@
 # RC Auto Scheduling
-自動化assign系統<br>vide coding (對，看style就知道orz<br>
+自動化assign系統<br>vibe coding (對，看style就知道orz<br>
 <a href="https://123456dr.github.io/auto_scheduling/" target="_blank">https://123456dr.github.io/auto_scheduling</a><br>
 
 yt影片 : https://youtu.be/lCesagWgb8s?feature=shared <br>
